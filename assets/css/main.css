@@ -99,11 +99,11 @@ input, select, textarea {
 	}
 
 	body {
-		background-color: #935d8c;
-		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-		background-image: url("images/overlay.png"), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+		background-color: #74B2A8;
+		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #052C49 15%, #FEFCFD 85%);
+		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #052C49 15%, #FEFCFD 85%);
+		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #052C49 15%, #FEFCFD 85%);
+		background-image: url("images/overlay.png"), linear-gradient(45deg, #052C49 15%, #FEFCFD 85%);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -120,7 +120,7 @@ input, select, textarea {
 /* Type */
 
 	body {
-		background-color: #935d8c;
+		background-color: #FEFCFD;
 		color: rgba(255, 255, 255, 0.65);
 	}
 
@@ -194,7 +194,7 @@ input, select, textarea {
 		}
 
 	h1, h2, h3, h4, h5, h6 {
-		font-weight: 300;
+		font-weight: 400;
 		line-height: 1.5;
 		margin: 0 0 0.7em 0;
 		letter-spacing: -0.025em;
@@ -2999,16 +2999,14 @@ input, select, textarea {
 
 		.spotlight .image {
 			display: inline-block;
-			margin-left: 4em;
-			padding: 0.65em;
-			border-radius: 100%;
-			border: solid 1px;
+			margin-left: 0em;
+			border-radius: 0%;
 		}
 
 			.spotlight .image img {
 				display: block;
-				border-radius: 100%;
-				width: 16em;
+				border-radius: 0%;
+				width: 20em;
 			}
 
 		@media screen and (max-width: 980px) {
@@ -3056,18 +3054,21 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			.spotlight .image {
-				padding: 0.35em;
 			}
 
 				.spotlight .image img {
 					width: 12em;
+                    display: block;
+                    border-radius: 0; /* Cambiado de 100% a 0 */
+                    width: 16em;
 				}
 
 		}
 
-	.spotlight .image {
+	/*.spotlight .image {
 		border-color: rgba(255, 255, 255, 0.35);
-	}
+        border-radius: 0 !important;
+	}*/
 
 /* Header */
 
@@ -3578,6 +3579,11 @@ input, select, textarea {
 
 		#main .spotlight .image {
 			border-color: #dddddd;
+            display: inline-block;
+            margin-left: 2em;
+            padding: 0;
+            border-radius: 0; /* Cambiado de 100% a 0 */
+            box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.1); /* Sombreado sutil */
 		}
 
 		#main > .main {
@@ -3783,3 +3789,66 @@ input, select, textarea {
 			}
 
 		}
+
+/* Estilos personalizados para los íconos en la sección de ventajas */
+.features .fa-chart-line {
+    color: #39AC98;
+}
+
+.features .fa-lightbulb {
+    color: #FF8484;
+}
+
+.features .fa-clock {
+    color: #052C49;
+}
+
+/* Estilo para hacer la imagen del logo más pequeña */
+.logo-small {
+    width: 150px;  /* Ajusta este valor según tus necesidades */
+    height: auto;  /* Mantiene la proporción de la imagen */
+}
+
+/* Reducir el espacio superior e inferior del encabezado */
+#header.alt {
+    padding-top: 1em; /* Ajusta este valor según sea necesario */
+    padding-bottom: 1em; /* Ajusta este valor según sea necesario */
+    margin-bottom: 0; /* Elimina margen inferior si existe */
+}
+
+/* Reducir el espacio entre el encabezado y la siguiente sección */
+#main {
+    margin-top: 0; /* Ajusta este valor según sea necesario */
+}
+
+/* Ajustar el relleno y el margen de las secciones principales */
+.main.special {
+    padding-top: 2em; /* Ajusta este valor según sea necesario */
+    padding-bottom: 2em; /* Ajusta este valor según sea necesario */
+    margin-top: 1em; /* Ajusta este valor según sea necesario */
+}
+
+/* Estilo para la cuadrícula de contenido */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.content-item {
+    text-align: center;
+}
+
+.content-item img {
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto 1em auto;
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.1); /* Sombreado sutil */
+}
+
+@media (min-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
